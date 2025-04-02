@@ -4,32 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certified Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Are you Vanshika?</h1>
-    <input type="text" id="nameInput" placeholder="Type Yes to continue">
-    <button onclick="checkName()">Submit</button>
-    <div id="message" style="display: none;">
-        <h2>Welcome Vanshika</h2>
-        <button onclick="showCertificate()">Click here for Certificate</button>
+    <div class="container">
+        <h1>Are you Vanshika?</h1>
+        <input type="text" id="nameInput" placeholder="Type Yes to continue">
+        <button onclick="checkName()">Submit</button>
+        
+        <div id="message" class="hidden">
+            <h2>Welcome Vanshika</h2>
+            <button onclick="showCertificate()">Click here for Certificate</button>
+        </div>
+
+        <div id="certificate" class="hidden">
+            <h2>This certifies that <span class="highlight">Rudra Sen</span> has learned to use words. 🎉</h2>
+            <button onclick="redirectToSnap()">Can I text you now?</button>
+        </div>
     </div>
-    <div id="certificate" style="display: none;">
-        <h2>This certifies that Rudra Sen has learned to use words.</h2>
-        <button onclick="redirectToSnap()">Can I text you now?</button>
-    </div>
-    <script>
-        function checkName() {
-            var input = document.getElementById('nameInput').value;
-            if (input.toLowerCase() === 'yes') {
-                document.getElementById('message').style.display = 'block';
-            }
-        }
-        function showCertificate() {
-            document.getElementById('certificate').style.display = 'block';
-        }
-        function redirectToSnap() {
-            window.location.href = "https://www.snapchat.com/";
-        }
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
